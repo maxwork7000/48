@@ -23,14 +23,24 @@ public class StAX_Parser {
 
 		while (reader.hasNext()) {
 
-		eventType = reader.next();
+			eventType = reader.next();
 
 			if (eventType == XMLStreamReader.START_ELEMENT) {
-			if (reader.getLocalName() == element_01) {System.out.println("Key Word: \t " + reader.getElementText());}
-			if (reader.getLocalName() == element_02) {System.out.println("Engine: \t " + reader.getElementText());}
-			if (reader.getLocalName() == element_03) {System.out.println("Version: \t " + reader.getElementText());}
-			if (reader.getLocalName() == element_04) {System.out.println("Response time: \t " + reader.getElementText());}
-			if (reader.getLocalName() == element_05) {System.out.println("Number of deals: " + reader.getAttributeValue(0));}
+				if (reader.getLocalName() == element_01) {
+					System.out.println("Key Word: \t " + reader.getElementText());
+				}
+				if (reader.getLocalName() == element_02) {
+					System.out.println("Engine: \t " + reader.getElementText());
+				}
+				if (reader.getLocalName() == element_03) {
+					System.out.println("Version: \t " + reader.getElementText());
+				}
+				if (reader.getLocalName() == element_04) {
+					System.out.println("Response time: \t " + reader.getElementText());
+				}
+				if (reader.getLocalName() == element_05) {
+					System.out.println("Number of deals: " + reader.getAttributeValue(0));
+				}
 			}
 		}
 	}
